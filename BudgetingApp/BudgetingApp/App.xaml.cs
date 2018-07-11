@@ -14,7 +14,7 @@ namespace BudgetingApp
 		{
 			InitializeComponent();
 
-			MainPage = new BudgetingApp.MainPage();
+			MainPage = new Views.HomePage();
 		}
 
         public App(string db_path)
@@ -23,7 +23,7 @@ namespace BudgetingApp
 
             DB_PATH = db_path;
 
-            MainPage = new BudgetingApp.MainPage();
+            MainPage = new Views.HomePage();
         }
 
         protected override void OnStart ()

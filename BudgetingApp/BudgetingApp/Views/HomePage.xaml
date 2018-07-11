@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BudgetingApp.Views.HomePage"
+             xmlns:local="clr-namespace:HyperlinkLabelControl">
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text="Welcome to AB5 App!" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
+                <Label Text="Money is one helluva commodity hard to keep in our wallets, bank accounts or piggy banks. This App is designed to help users to manage, track and budget their expenses."
+                        VerticalOptions="CenterAndExpand" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2"
+                        HorizontalOptions="CenterAndExpand" />
+
+                <StackLayout Orientation="Horizontal" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
+                    <Label x:Name="lblLogin" Text="Login" TextColor="SkyBlue">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="LoginTapped" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="or"/>
+                    <Label x:Name="lblRegister" Text="Register" TextColor="SkyBlue">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="RegisterTapped" NumberOfTapsRequired="1"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

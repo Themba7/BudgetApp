@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BudgetingApp"
+             x:Class="BudgetingApp.MainPage">
+
+    <StackLayout Margin="10,10,10,0">
+        
+        <Label Text="Welcome To My First Xamarin App" 
+            HorizontalOptions="Center" BackgroundColor="Brown" FontAttributes="Bold" FontSize="Large" />
+
+        <Grid>
+            <!--Define how many Grid Columns and Rows there will be-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            
+            <Entry x:Name="usernameEntry" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Username" />
+
+            <Entry x:Name="passwordEntry" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" Placeholder="Password" />
+
+            <Button Text="Login" Grid.Row="3" Grid.Column="0" Clicked="Login_Clicked" HorizontalOptions="End"/>
+            <Button Text="Cancel" Grid.Row="3" Grid.Column="1" Clicked="Cancel_Clicked" HorizontalOptions="Start" />
+            
+        </Grid>
+        
+        
+    </StackLayout>
+	
+</ContentPage>

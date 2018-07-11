@@ -26,8 +26,12 @@ namespace BudgetingApp
         }
         private void Login_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Page());
+            Navigation.PushModalAsync(new Views.HomePage());
         }
-
+        
+        private void Cancel_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new Views.HomePage());
+        }
     }
 }
